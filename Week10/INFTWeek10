@@ -1,10 +1,141 @@
+/* task 1: change "a" tag */
 <html>
 <head>
   <title>Week 10</title>
 </head>
 <body>
   <h1>JavaScript Demo</h1>
-  <a href="#" href="#" <a>onclick="alert('Hey!');"</a>>Click me</a>
+  <a href="#" onclick="alert('Hey!');">Click me</a>
   <p id="box"></p>
 </body>
 </html>
+
+<HR>
+
+/* task 2: change the onclick event in the "a" tag to be */
+<html>
+<head>
+  <title>Week 10</title>
+</head>
+<body>
+  <h1>JavaScript Demo</h1>
+  <a a href="#"onclick="document.getElementById('box').innerHTML = 'You clicked it!';">Click me</a>
+  <p id="box"></p>
+</body>
+</html>
+
+<HR>
+
+/* task 3: pressed 1 time */
+<html>
+<head>
+  <title>Week 10</title>
+</head>
+<body>
+   <h1>JavaScript Demo</h1>
+   <a href="#"onclick="document.getElementById('box').innerHTML = '<li>The link was pressed 1 times.</li>' ;">Click me</a>
+ 
+</body>
+</head>
+
+<hr>
+
+/* task 4: 
+
+<html>
+    <head>
+        <title>Week 10</title>
+    
+        <script>
+            counter = 0;
+    
+            function countClicks() {
+                counter = counter + 1;
+                var output = 'The link was pressed ' + counter + ' times.';
+                var element = document.getElementById('boxy');
+                element.innerHTML = output;
+            }
+        </script>
+    
+    </head>
+    <body>
+        <h1>JavaScript Demo</h1>
+        <a href="#" onclick="countClicks();">Click me</a>
+        <p id="boxy"></p>
+    </body>
+    </html>
+
+<HR>
+
+    <html>
+        <head>
+            <title>Week 10</title>
+            <script>
+                // Task 5: 
+                
+                let counter = 0;
+        
+                function countClicks(linkElement) {
+                    counter += 1;
+                    var output = 'The link was pressed ' + counter + ' times.';
+                    document.getElementById('boxy').innerHTML = output;
+                }
+            </script>
+        </head>
+        <body>
+            <h1>JavaScript Demo</h1>
+            <a href="#" onclick="countClicks(this);">Click me</a>
+            <p id="boxy"></p>
+        </body>
+        </html>
+
+<hr>
+
+<html>
+<head>
+    <title>Week 10</title>
+    <script>
+        // Task 6: 
+        
+        let counter = 0;
+
+        function countClicks(linkElement) {
+            counter += 1;
+            var output = 'The link was pressed ' + counter + ' times.';
+            document.getElementById('boxy').innerHTML = output;
+        }
+    </script>
+</head>
+<body>
+    <h1>JavaScript Demo</h1>
+    <a href="#" onclick="countClicks(this);">Click me</a>
+    <p id="boxy"></p>
+
+    <img src="http://www.outgrabe.net/cat01.jpg" 
+         onmouseover="this.src='http://www.outgrabe.net/cat02.jpg'"
+         onmouseout="this.src='http://www.outgrabe.net/cat01.jpg'" />
+
+</body>
+</html>
+
+<html>
+        <head>
+            <title>Week 10</title>
+            <script>
+                // Task 5: 
+                
+                let counter = 0;
+        
+                function countClicks(linkElement) {
+                    counter += 1;
+                    var output = 'The link was pressed ' + counter + ' times.';
+                    document.getElementById('boxy').innerHTML = output;
+                }
+            </script>
+        </head>
+        <body>
+            <h1>JavaScript Demo</h1>
+            <a href="#" onclick="countClicks(this);">Click me</a>
+            <p id="boxy"></p>
+        </body>
+        </html>
