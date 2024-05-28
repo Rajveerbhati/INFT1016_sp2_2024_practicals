@@ -1,10 +1,10 @@
-h1, h2, {
+h1, h2 {
     padding: 0;
-    {margin: 0 0 0.5em 0;}
+    margin: 0 0 0.5em 0;
     font: 1em/1.33 Verdana, sans-serif;
  }
 
- p, {
+ p {
       padding: 0;
       margin: 0 0 0 0 0;
 
@@ -13,10 +13,101 @@ h1, h2, {
 
  h1, h2 {
     color: red;
-    {margin: 0.83em 0 0.17em 0; }
+    margin: 0.83em 0 0.17em 0; 
  }
  h1 {font-size: 1.16em;}
 h2 {font-size: 1.16em;}
 p:first-of-type {
 font: 1.7em/1.33 Verdana, sans-serif;
+}
+
+body {
+   background: var(--c-background-color);
+}
+
+header {
+  background: var(--c-background-highlights);
+
+}
+
+footer {
+   background:var(--c-background-highlights);
+
+}
+
+main {
+   color:var(--base-font-color);
+}
+
+article {
+   color:var(--c-magenta);
+}
+
+article a:hover {
+   color:var(--c-orange);
+   text-decoration: underline;
+}
+
+article h3{
+   border: solid;
+   color: var(--c-cyan);
+   padding: 3px;
+   margin: 0;
+}
+
+header{
+   text-align: center;
+   font-size: 150%;
+   color: var(--c-yellow);
+}
+
+nav {
+   width: 100%;
+}
+
+nav ul {
+   list-style: none;
+   display: flex;
+   justify-content: center;
+   padding: 0;
+   margin: 0;
+}
+
+nav li {
+   margin: 0 15px;
+   flex: 1;
+   text-align: center;  
+}
+
+nav a {
+   text-decoration: none;
+   color: var(--base-font-color);
+}
+
+aside a {
+   color: var(--c-red);
+   text-decoration: none;
+}
+
+aside a:hover{
+color: var(--c-blue);
+text-decoration: underline;
+}
+
+:root{
+--base-font-color:         rgb(131 148 150);
+--secondary-font-color:    rgb(88 110 117); 
+--emphasised-font:         rgb(147 161 161);
+
+--c-background-color:      rgb(0  43  54);
+--c-background-highlights: rgb(7  54  66);
+
+--c-yellow:      rgb(181 137   0); 
+--c-orange:      rgb(203  75  22);  
+--c-red:         rgb(220  50  47);  
+--c-magenta:     rgb(211  54 130); 
+--c-violet:      rgb(108 113 196); 
+--c-blue:        rgb(38 139 210); 
+--c-cyan:        rgb(42 161 152); 
+--c-green:       rgb(133 153   0); 
 }
