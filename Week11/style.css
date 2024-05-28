@@ -90,9 +90,20 @@ aside a {
 }
 
 aside a:hover{
-color: var(--c-blue);
+color: var(--c-orange);
 text-decoration: underline;
 }
+
+
+<div>
+   <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Our team</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">Contact</a></li>
+   </ul>
+</div>
+
 
 :root{
 --base-font-color:         rgb(131 148 150);
