@@ -1,3 +1,77 @@
-.unisa {
-    width: 600px;
+
+body {
+    background-color: rgb(185, 185, 185);
 }
+
+h1{
+    font-size: 50px;
+    color: black;
+}
+
+h2{
+    color: black;
+    font-size: 30px;
+}
+
+h3{
+    color: black;
+    font-size: 30px;
+    
+}
+
+.border{
+    color: black;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+}
+
+.border1{
+    color: black;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+}
+
+p{
+    text-align: center;
+    color: black;
+}
+
+
+p0{
+    color: aliceblue;
+}
+
+
+nav li {
+    text-align: center;
+}
+
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.button1 {
+    position: absolute;
+    left: 190px;
+    top: 370px;
+    background-color: darkslategrey;
+    color: aliceblue;
+    
+}
+
+.button2 {
+    position:absolute;
+    bottom: 135px;
+    left: 790px;
+    background-color: darkslategrey;
+    color: aliceblue;
+}
+

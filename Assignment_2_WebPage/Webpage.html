@@ -4,14 +4,23 @@
 
     <title>My page title</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="webpage style.css">
+
+    <style>
+        img{
+          display: block;
+          margin: auto;
+        }
+
+
+    </style>
 
   </head>
 
   <body>
 
     <header>
-      <h1>Header</h1>
+      <h1 style="text-align: center;">Header</h1>
     </header>
 
     <nav>
@@ -21,7 +30,6 @@
         <li><a href="#">To Do Tasks</a></li>
       </ul>
 
-       <!-- A Search form is another common non-linear way to navigate through a website. -->
 
        <form>
          <input type="search" name="q" placeholder="Search query">
@@ -29,37 +37,67 @@
        </form>
      </nav>
 
-    <!-- Here is our page's main content -->
+
+
     <main>
 
-      <!-- It contains an article -->
+     <div>
       <article>
-        <h2>My first-year at University of South Australia</h2>
+        <h2 style="text-align: center;"> My first-year at University of South Australia</h2>
+        
+        <button class="button1" onclick="firstImg()">First Image</button>
 
-        <img class="unisa" src="https://s3.ap-south-1.amazonaws.com/gotouniv/cover_photo/761/cover_photo_1500X500.jpg"/> 
+        <img id="unisa" src="#" height="300" width="500"/>
+      </br>
+        <p id="image-description"></p>
+        <p><a id="image-link-url" href="#"></a></p>
 
-        <p> My first year university has been a very weird experience as the transition from highschool to university was very significant and a vast one. </p>
+        <button class="button2" onclick="secondImg()">Second Image</button>
+        
+        <script>
+        
+          var image1=document.querySelector("#unisa");
+          var imgDesc=document.querySelector("#image-description")
+          var imgLink=document.querySelector("#image-link-url")
 
-        <h3>Subsection</h3>
+          function firstImg()
+          {
+            image1.src="https://www.unisa.edu.au/contentassets/d2c00028920740739d48595c72b82269/ucloncampus--x-buildingweb.jpg";
+            imgDesc.innerHTML = 'This is a picture of the Mawson Lakes Campus of UniSA by University of South Australia, this is the campus I am currently studying at and it is a very well maintained campus with several cafes surrounding it. To visit this the page click the link.' 
+            imgLink.href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.unisa.edu.au%2Fmedia-centre%2FReleases%2F2017-Media-Releases%2FUCL-Engineering-makes-itself-at-home-at-Mawson-Lakes-campus%2F&psig=AOvVaw3djrj3J9OQTUvnZNlqMVAf&ust=1718328733822000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJjIi8G314YDFQAAAAAdAAAAABAE"
+            imgLink.innerHTML = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.unisa.edu.au%2Fmedia-centre%2FReleases%2F2017-Media-Releases%2FUCL-Engineering-makes-itself-at-home-at-Mawson-Lakes-campus%2F&psig=AOvVaw3djrj3J9OQTUvnZNlqMVAf&ust=1718328733822000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJjIi8G314YDFQAAAAAdAAAAABAE"
+          }
 
-        <p>Donec ut librero sed accu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor.</p>
+          function secondImg()
+          {
+            image1.src="https://glamadelaide.com.au/wp-content/uploads/2021/11/university-of-adelaide-MOD-north-terrace.jpg";
+            imgDesc.innerHTML = 'This is a picture of the City West Campus of UniSA by University of South Australia, to visit this the page click the link.'
+            imgLink.href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fglamadelaide.com.au%2Fa-new-dawn-for-higher-education-in-south-australia-as-universities-agree-to-support-government-in-merger%2F&psig=AOvVaw2n5tfyYMJLFlLwRs5M3_gh&ust=1718328753279000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCKD9lcq314YDFQAAAAAdAAAAABAE"
+            imgLink.innerHTML = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fglamadelaide.com.au%2Fa-new-dawn-for-higher-education-in-south-australia-as-universities-agree-to-support-government-in-merger%2F&psig=AOvVaw2n5tfyYMJLFlLwRs5M3_gh&ust=1718328753279000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCKD9lcq314YDFQAAAAAdAAAAABAE"
+          }
+          
 
-        <p>Pelientesque auctor nisi id magna consequat sagittis. Curabitur dapibus, enim sit amet elit pharetra tincidunt feugiat nist imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros.</p>
 
-        <h3>Another subsection</h3>
+        </script>
 
-        <p>Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum soclis natoque penatibus et manis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.</p>
 
-        <p>Vivamus fermentum semper porta. Nunc diam velit, adipscing ut tristique vitae sagittis vel odio. Maecenas convallis ullamcorper ultricied. Curabitur ornare, ligula semper consectetur sagittis, nisi diam iaculis velit, is fringille sem nunc vet mi.</p>
+        <p style="text-align: center;"> My first year university has been a very weird experience as the transition from highschool to university was very significant and a vast one. </p>
+
+        <h3 style="text-align: center;">Subsection</h3>
+
+        <p class="border"> Donec ut librero sed accu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor.</p>
+
+        <h3 style="text-align: center;">Another subsection</h3>
+
+        <p class="border1">Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum soclis natoque penatibus et manis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.</p>
+
       </article>
-
+    <div>
 
     </main>
 
-    <!-- And here is our main footer that is used across all the pages of our website -->
-
     <footer>
-      <p>©Copyright 2050 by nobody. All rights reversed.</p>
+      <p0>©Copyright 2050 by nobody. All rights reversed.</p>
     </footer>
 
   </body>
