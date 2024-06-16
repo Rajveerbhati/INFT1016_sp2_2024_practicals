@@ -13,6 +13,7 @@
         }
 
 
+
     </style>
 
   </head>
@@ -53,7 +54,11 @@
         <p><a id="image-link-url" href="#"></a></p>
 
         <button class="button2" onclick="secondImg()">Second Image</button>
+
+        <button id="toggle" onclick="toggle()">Toggle Theme</button>
         
+        <div id="DateandTime"></div>
+
         <script>
         
           var image1=document.querySelector("#unisa");
@@ -75,7 +80,23 @@
             imgLink.href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fglamadelaide.com.au%2Fa-new-dawn-for-higher-education-in-south-australia-as-universities-agree-to-support-government-in-merger%2F&psig=AOvVaw2n5tfyYMJLFlLwRs5M3_gh&ust=1718328753279000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCKD9lcq314YDFQAAAAAdAAAAABAE"
             imgLink.innerHTML = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fglamadelaide.com.au%2Fa-new-dawn-for-higher-education-in-south-australia-as-universities-agree-to-support-government-in-merger%2F&psig=AOvVaw2n5tfyYMJLFlLwRs5M3_gh&ust=1718328753279000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCKD9lcq314YDFQAAAAAdAAAAABAE"
           }
+
+          function toggle() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+
+          }
           
+          document.getElementById('toggle').addEventListener('click', toggleTheme);
+
+          function displayDateandTime() {
+            const now = new Date();
+            const dateTimeString = now.toLocaleString();
+            document.getElementById('DateandTime').innerText = dateTimeString;
+          }
+
+          displayDateandTime();
 
 
         </script>

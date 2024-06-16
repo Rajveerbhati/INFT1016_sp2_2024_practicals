@@ -1,26 +1,27 @@
 
 body {
-    background-color: rgb(185, 185, 185);
+    background-color: var(--bg-color);
+    color: var(--font-color);
 }
 
 h1{
     font-size: 50px;
-    color: black;
+    color: var(--font-color);
 }
 
 h2{
-    color: black;
+    color: var(--font-color);
     font-size: 30px;
 }
 
 h3{
-    color: black;
+    color: var(--font-color);
     font-size: 30px;
     
 }
 
 .border{
-    color: black;
+    color: var(--font-color);
     border-style: solid;
     border-width: 2px;
     border-radius: 5px;
@@ -29,7 +30,7 @@ h3{
 }
 
 .border1{
-    color: black;
+    color: var(--font-color);
     border-style: solid;
     border-width: 2px;
     border-radius: 5px;
@@ -39,39 +40,77 @@ h3{
 
 p{
     text-align: center;
-    color: black;
+    color: var(--font-color);
 }
 
 
 p0{
-    color: aliceblue;
+    color: var(--font-color);
 }
 
 
-nav li {
+nav {
     text-align: center;
+    color: var(--font-color);
+    
 }
 
+ul {
+    color: var(--font-color);
+}
+
+
+a {
+    color: var(--secondary-color);
+}
 
 nav ul {
     display: flex;
     justify-content: space-around;
+    color: var(--font-color);
 }
 
 .button1 {
     position: absolute;
-    left: 190px;
+    left: 235px;
     top: 370px;
-    background-color: darkslategrey;
-    color: aliceblue;
-    
+    background-color: rgb(223, 105, 69);
+    color: var(--font-color);
+    cursor: pointer;
 }
 
 .button2 {
     position:absolute;
-    bottom: 135px;
-    left: 790px;
-    background-color: darkslategrey;
-    color: aliceblue;
+    bottom: 170px;
+    left: 860px;
+    background-color: rgb(223, 105, 69);
+    color: var(--font-color);
+    cursor: pointer;
 }
 
+
+#toggle {
+    position: absolute;
+    top: 20px;
+    left: 1070px;
+    cursor: pointer;
+    background-color: rgb(87, 219, 239);
+
+}
+
+:root {
+    --primary-color: rgb(255, 255, 255);
+    --secondary-color: rgb(206, 115, 59);
+    --bg-color: rgb(255,255,255);
+    --font-color: rgb(0,0,0);
+    --heading-color: rgb(79, 79, 250);
+
+}
+
+[data-theme="dark"] {
+    --primary-color: rgb(0,0,0);
+    --secondary-color: rgb(206, 115, 59);
+    --bg-color: rgb(15,15,15);
+    --font-color: rgb(255,255,255);
+    --heading-color: rgb(75, 169, 246);
+}
