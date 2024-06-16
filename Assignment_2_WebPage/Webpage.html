@@ -57,10 +57,24 @@
 
         <button id="toggle" onclick="toggle()">Toggle Theme</button>
         
-        <div id="DateandTime"></div>
+
+        <div class="container">
+             <h4 id="currentDateTime"></h4>
+            
+
+        </div>
+
 
         <script>
-        
+
+          let time = document.getElementById("currentDateTime");
+
+          setInterval(() =>{
+            let d = new Date();
+            time.innerHTML = d.toLocaleTimeString();
+
+          },1000)
+          
           var image1=document.querySelector("#unisa");
           var imgDesc=document.querySelector("#image-description")
           var imgLink=document.querySelector("#image-link-url")
@@ -90,14 +104,7 @@
           
           document.getElementById('toggle').addEventListener('click', toggleTheme);
 
-          function displayDateandTime() {
-            const now = new Date();
-            const dateTimeString = now.toLocaleString();
-            document.getElementById('DateandTime').innerText = dateTimeString;
-          }
-
-          displayDateandTime();
-
+        
 
         </script>
 
