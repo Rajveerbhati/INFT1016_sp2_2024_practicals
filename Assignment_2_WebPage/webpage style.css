@@ -94,14 +94,14 @@ nav ul {
     top: 20px;
     left: 900px;
     cursor: pointer;
-    background-color: rgb(87, 219, 239);
+    background-color: rgb(102, 72, 51);
 
 }
 
 :root {
     --primary-color: rgb(255, 255, 255);
     --secondary-color: rgb(206, 115, 59);
-    --bg-color: rgb(255,255,255);
+    --bg-color: rgb(243, 229, 104);
     --font-color: rgb(0,0,0);
     --heading-color: rgb(79, 79, 250);
 
@@ -110,7 +110,7 @@ nav ul {
 [data-theme="dark"] {
     --primary-color: rgb(0,0,0);
     --secondary-color: rgb(206, 115, 59);
-    --bg-color: rgb(15,15,15);
+    --bg-color: rgb(21, 11, 62);
     --font-color: rgb(255,255,255);
     --heading-color: rgb(75, 169, 246);
 }
@@ -138,7 +138,7 @@ nav ul {
 h5 {
     text-align: center;
     font-size: 20px;
-    color: rgb(87, 219, 239);
+    color: rgb(255, 255, 255);
     top: 100px;
 
 }
@@ -147,5 +147,4 @@ form {
     text-align: center;
     top: 50px;
     
-
 }

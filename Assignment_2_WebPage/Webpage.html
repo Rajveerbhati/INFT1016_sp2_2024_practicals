@@ -17,14 +17,19 @@
     </style>
 
   </head>
-
-  <body onload="headingUpdate()">
+  
+  <body onload="intializeWebpage()">
       <h5 id="greetings">Hello, User</h5>
       <form id="nameList" action="">
             <label for="userName">Enter your name:</label>
             <input type="text" id="userName" name="userName">
             <button type="submit">Submit</button>
       </form>
+
+      <div class="theme-pref">
+           <label for="webpagetheme">Select your theme:</label>
+           <input type="checkbox" id="webpagetheme" name="webpagetheme">
+      </div>
 
 
 
@@ -87,7 +92,7 @@
           function firstImg()
           {
             image1.src="https://www.unisa.edu.au/contentassets/d2c00028920740739d48595c72b82269/ucloncampus--x-buildingweb.jpg";
-            imgDesc.innerHTML = 'This is a picture of the Mawson Lakes Campus of UniSA by University of South Australia, this is the campus I am currently studying at and it is a very well maintained campus with several cafes surrounding it. To visit this the page click the link.' 
+            imgDesc.innerHTML = 'This is a picture of the Mawson Lakes Campus of UniSA by University of South Australia, this is the campus I am currently studying at and it is a very well maintained campus with several cafes surrounding it. To visit this the page click the link below.' 
             imgLink.href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.unisa.edu.au%2Fmedia-centre%2FReleases%2F2017-Media-Releases%2FUCL-Engineering-makes-itself-at-home-at-Mawson-Lakes-campus%2F&psig=AOvVaw3djrj3J9OQTUvnZNlqMVAf&ust=1718328733822000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJjIi8G314YDFQAAAAAdAAAAABAE"
             imgLink.innerHTML = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.unisa.edu.au%2Fmedia-centre%2FReleases%2F2017-Media-Releases%2FUCL-Engineering-makes-itself-at-home-at-Mawson-Lakes-campus%2F&psig=AOvVaw3djrj3J9OQTUvnZNlqMVAf&ust=1718328733822000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJjIi8G314YDFQAAAAAdAAAAABAE"
           }
@@ -95,7 +100,7 @@
           function secondImg()
           {
             image1.src="https://glamadelaide.com.au/wp-content/uploads/2021/11/university-of-adelaide-MOD-north-terrace.jpg";
-            imgDesc.innerHTML = 'This is a picture of the City West Campus of UniSA by University of South Australia, to visit this the page click the link.'
+            imgDesc.innerHTML = 'This is a picture of the Campus of UniSA in city by Glam Adelaide, to visit this the page click the link below.'
             imgLink.href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fglamadelaide.com.au%2Fa-new-dawn-for-higher-education-in-south-australia-as-universities-agree-to-support-government-in-merger%2F&psig=AOvVaw2n5tfyYMJLFlLwRs5M3_gh&ust=1718328753279000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCKD9lcq314YDFQAAAAAdAAAAABAE"
             imgLink.innerHTML = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fglamadelaide.com.au%2Fa-new-dawn-for-higher-education-in-south-australia-as-universities-agree-to-support-government-in-merger%2F&psig=AOvVaw2n5tfyYMJLFlLwRs5M3_gh&ust=1718328753279000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCKD9lcq314YDFQAAAAAdAAAAABAE"
           }
@@ -104,6 +109,7 @@
             const currentTheme = document.documentElement.getAttribute('data-theme');
             const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
             document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('webpagetheme', newTheme);
 
           }
           
@@ -113,13 +119,33 @@
               const urlParams = new URLSearchParams(window.location.search);
               return urlParams.get(param);
           }
+          
+          function updateTheme() {
+            const currentTheme = localStorage.getItem('webpagetheme') || 'light';
+            document.documentElement.setAttribute('data-theme', currentTheme);
+            document.getElementById('webpagetheme').checked = currentTheme === 'dark';
+          }
+
+
+          function intializeWebpage() {
+            headingUpdate();
+            updateTheme();
+            document.getElementById('webpagetheme').addEventListener('change', toggleTheme);
+          }
+
 
           function headingUpdate() {
             const name = getQueryParam('userName');
             if (name) {
                 const greetingsElement = document.getElementById('greetings');
                 greetingsElement.textContent = `Hello there, ${name}`;
-
+                localStorage.setItem('userName', name);
+            } else {
+              const storedName = localStorage.getItem('userName');
+              if (storedName) {
+                  const greetingsElement = document.getElementById('greetings');
+                  greetingsElement.textContent = `Hello there, ${storedName}`;
+              }
             }
           }
 
@@ -128,13 +154,13 @@
 
         <p style="text-align: center;"> My first year university has been a very weird experience as the transition from highschool to university was very significant and a vast one. </p>
 
-        <h3 style="text-align: center;">Subsection</h3>
+        <h3 style="text-align: center;">My experience so far</h3>
 
-        <p class="border"> Donec ut librero sed accu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor.</p>
+        <p class="border"> Learning how to program has been one very challanging task for me as I am someone who has had no prior experience with any sort of languages or even IT in general. I was among the many that were unsure about what degree to choose but the bachelor of IT was something that stood out to me the most during the end of high school so I decided I will look further into this degree instead.</p>
 
-        <h3 style="text-align: center;">Another subsection</h3>
+        <h3 style="text-align: center;">First day at university</h3>
 
-        <p class="border1">Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum soclis natoque penatibus et manis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.</p>
+        <p class="border1">If there's something that I remember so vividly, it has to be my first day at uni it felt like that you've just moved to different schools or it's your first day of high-school and you're all alone once again hoping to find people that share the same interests as you. Apart from not being very clueless I was also very scared about not knowing a single thing about the course. I remember coming to my Networking Fundamentals class and was absouletly terrified with Packet Tracer as I had zero clue on what it was and what its purpose was, this single though haunted me for whole of first week leading me to question myself and my choice of degree. But ofcourse as time went on I gradually started gaining interest and put things together and figure it all out once and for all.</p>
 
       </article>
     <div>
