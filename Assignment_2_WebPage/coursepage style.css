@@ -29,6 +29,17 @@ h4{
     
 }
 
+h5{
+    color: var(--font-color);
+    font-size: 30px;
+    text-align: center; 
+}
+
+h6{
+    color: var(--font-color);
+    font-size: 30px;
+    text-align: center;
+}
 
 
 p{
