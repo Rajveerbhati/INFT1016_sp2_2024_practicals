@@ -18,30 +18,30 @@
 
   </head>
   
-  <body onload="initialiseWebpage()"> <!--Body of my webpage, initialise-->
-      <h5 id="greetings">Hello, User</h5>
-      <form id="nameList" action="">
-            <label for="userName">Enter your name:</label>
-            <input type="text" id="userName" name="userName">
-            <button type="submit">Submit</button>
+  <body onload="initialiseWebpage()"> <!-- Body of my webpage, initialise function being called when webpage loads up -->
+      <h5 id="greetings">Hello, User</h5> <!-- Message to the user with an ID -->
+      <form id="nameList" action=""> <!-- Form container for user input (user name) -->
+            <label for="userName">Enter your name:</label> <!-- Input field for user to enter input -->
+            <input type="text" id="userName" name="userName"> <!-- Text input field for user to enter their name -->
+            <button type="submit">Submit</button> <!-- Submit button -->
       </form>
 
-      <div class="theme-pref">
+      <div class="theme-pref"> <!-- Theme preference Div container -->
            <label for="webpagetheme">Select your theme:</label>
-           <input type="checkbox" id="webpagetheme" name="webpagetheme">
+           <input type="checkbox" id="webpagetheme" name="webpagetheme"> <!-- Checkbox to choose between themes -->
       </div>
 
 
-
+      <!-- Main header of the webpage, centered -->
     <header>
       <h1 style="text-align: center;">This webpage will highlight my first year at University of South Australia</h1>
     </header>
 
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="Courses.html">Courses</a></li>
-        <li><a href="#">To Do Tasks</a></li>
+    <nav> <!-- Navigation menu -->
+      <ul> 
+        <li><a href="#">Home</a></li> <!-- Navigation link to the home page-->
+        <li><a href="Courses.html">Courses</a></li> <!-- Navigation link to the course page-->
+        <li><a href="#">To Do Tasks</a></li> <!-- Navigation link to the to do tasks page-->
       </ul>
 
 
@@ -54,86 +54,90 @@
 
      <div>
       <article>
-        <h2 style="text-align: center;"> My first-year at University of South Australia</h2>
+        <h2 style="text-align: center;"> My first-year at University of South Australia</h2> <!-- Centered article header -->
         
-        <button class="button1" onclick="firstImg()">First Image</button>
+        <button class="button1" onclick="firstImg()">First Image</button> <!-- Button for the first image, displays firstImg when clicked -->
 
-        <img id="unisa" src="#" height="300" width="500"/>
+        <img id="unisa" src="#" height="300" width="500"/> 
       </br>
-        <p id="image-description"></p>
-        <p><a id="image-link-url" href="#"></a></p>
+        <p id="image-description"></p> <!-- Image description paragraph -->
+        <p><a id="image-link-url" href="#"></a></p> <!-- Link inside a paragraph with ID reference -->
 
-        <button class="button2" onclick="secondImg()">Second Image</button>
+        <button class="button2" onclick="secondImg()">Second Image</button> <!-- Button for the second image, displays secondImg when clicked -->
 
-        <button id="toggle" onclick="toggle()">Toggle Theme</button>
+        <button id="toggle" onclick="toggle()">Toggle Theme</button> <!-- Toggle theme button uses the toggle fucntion when clicked on by user -->
         
 
         <div class="container">
-             <h4 id="currentDateTime"></h4>
+             <h4 id="currentDateTime"></h4> <!-- Header used to display the current time -->
             
 
         </div>
 
 
         <script>
-
-          let time = document.getElementById("currentDateTime");
+          
+          let time = document.getElementById("currentDateTime"); /* Reference to element that displays current time */
 
           setInterval(() =>{
             let d = new Date();
-            time.innerHTML = d.toLocaleTimeString();
+            time.innerHTML = d.toLocaleTimeString(); /* Current time being updated */
 
-          },1000)
+          },1000) /* Updating the time every second */
           
+          
+          /* References to images */
           var image1=document.querySelector("#unisa");
           var imgDesc=document.querySelector("#image-description")
           var imgLink=document.querySelector("#image-link-url")
 
           function firstImg()
           {
-            image1.src="https://www.unisa.edu.au/contentassets/d2c00028920740739d48595c72b82269/ucloncampus--x-buildingweb.jpg";
-            imgDesc.innerHTML = 'This is a picture of the Mawson Lakes Campus of UniSA by University of South Australia, this is the campus I am currently studying at and it is a very well maintained campus with several cafes surrounding it. To visit this the page click the link below.' 
-            imgLink.href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.unisa.edu.au%2Fmedia-centre%2FReleases%2F2017-Media-Releases%2FUCL-Engineering-makes-itself-at-home-at-Mawson-Lakes-campus%2F&psig=AOvVaw3djrj3J9OQTUvnZNlqMVAf&ust=1718328733822000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJjIi8G314YDFQAAAAAdAAAAABAE"
-            imgLink.innerHTML = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.unisa.edu.au%2Fmedia-centre%2FReleases%2F2017-Media-Releases%2FUCL-Engineering-makes-itself-at-home-at-Mawson-Lakes-campus%2F&psig=AOvVaw3djrj3J9OQTUvnZNlqMVAf&ust=1718328733822000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJjIi8G314YDFQAAAAAdAAAAABAE"
+            image1.src="https://www.unisa.edu.au/contentassets/d2c00028920740739d48595c72b82269/ucloncampus--x-buildingweb.jpg"; /* Setting the source of the image to the URL of the first image */
+            imgDesc.innerHTML = 'This is a picture of the Mawson Lakes Campus of UniSA by University of South Australia, this is the campus I am currently studying at and it is a very well maintained campus with several cafes surrounding it. To visit this the page click the link below.' /* Updating the description of the image */
+            imgLink.href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.unisa.edu.au%2Fmedia-centre%2FReleases%2F2017-Media-Releases%2FUCL-Engineering-makes-itself-at-home-at-Mawson-Lakes-campus%2F&psig=AOvVaw3djrj3J9OQTUvnZNlqMVAf&ust=1718328733822000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJjIi8G314YDFQAAAAAdAAAAABAE" /* Updating the link URL */
+            imgLink.innerHTML = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.unisa.edu.au%2Fmedia-centre%2FReleases%2F2017-Media-Releases%2FUCL-Engineering-makes-itself-at-home-at-Mawson-Lakes-campus%2F&psig=AOvVaw3djrj3J9OQTUvnZNlqMVAf&ust=1718328733822000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJjIi8G314YDFQAAAAAdAAAAABAE" /* Updating the link text */
           }
 
           function secondImg()
           {
-            image1.src="https://glamadelaide.com.au/wp-content/uploads/2021/11/university-of-adelaide-MOD-north-terrace.jpg";
-            imgDesc.innerHTML = 'This is a picture of the Campus of UniSA in city by Glam Adelaide, to visit this the page click the link below.'
-            imgLink.href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fglamadelaide.com.au%2Fa-new-dawn-for-higher-education-in-south-australia-as-universities-agree-to-support-government-in-merger%2F&psig=AOvVaw2n5tfyYMJLFlLwRs5M3_gh&ust=1718328753279000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCKD9lcq314YDFQAAAAAdAAAAABAE"
-            imgLink.innerHTML = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fglamadelaide.com.au%2Fa-new-dawn-for-higher-education-in-south-australia-as-universities-agree-to-support-government-in-merger%2F&psig=AOvVaw2n5tfyYMJLFlLwRs5M3_gh&ust=1718328753279000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCKD9lcq314YDFQAAAAAdAAAAABAE"
+            image1.src="https://glamadelaide.com.au/wp-content/uploads/2021/11/university-of-adelaide-MOD-north-terrace.jpg"; /* Setting the source of the image to the URL of the second image */
+            imgDesc.innerHTML = 'This is a picture of the Campus of UniSA in city by Glam Adelaide, to visit this the page click the link below.'  /* Updating the description of the image */
+            imgLink.href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fglamadelaide.com.au%2Fa-new-dawn-for-higher-education-in-south-australia-as-universities-agree-to-support-government-in-merger%2F&psig=AOvVaw2n5tfyYMJLFlLwRs5M3_gh&ust=1718328753279000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCKD9lcq314YDFQAAAAAdAAAAABAE" /* Updating the link URL */
+            imgLink.innerHTML = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fglamadelaide.com.au%2Fa-new-dawn-for-higher-education-in-south-australia-as-universities-agree-to-support-government-in-merger%2F&psig=AOvVaw2n5tfyYMJLFlLwRs5M3_gh&ust=1718328753279000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCKD9lcq314YDFQAAAAAdAAAAABAE" /* Updating the link text */
           }
 
           function toggle() {
-            const currentTheme = document.documentElement.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            document.documentElement.setAttribute('data-theme', newTheme);
-            localStorage.setItem('webpagetheme', newTheme);
+            const currentTheme = document.documentElement.getAttribute('data-theme'); /* Getting access to the current theme */
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark'; /* Choose between dark and light mode */
+            document.documentElement.setAttribute('data-theme', newTheme); /* Setting new theme */
+            localStorage.setItem('webpagetheme', newTheme); /* Storing new theme in local storage */
 
           }
           
-          document.getElementById('toggle').addEventListener('click', toggleTheme);
+          document.getElementById('toggle').addEventListener('click', toggleTheme); /* Implementing a even listener to toggle button to call its function */
 
+          /* Function for getting the value of a query parameter */
           function getQueryParam(param){
               const urlParams = new URLSearchParams(window.location.search);
               return urlParams.get(param);
           }
           
+          /* Function to update the theme of the webpage depending on local storage or default setting */
           function updateTheme() {
             const currentTheme = localStorage.getItem('webpagetheme') || 'light';
             document.documentElement.setAttribute('data-theme', currentTheme);
             document.getElementById('webpagetheme').checked = currentTheme === 'dark';
           }
 
-
+          /* Function to initialise the webpage with updated headings and theme */
           function initialiseWebpage() {
             headingUpdate();
             updateTheme();
             document.getElementById('webpagetheme').addEventListener('change', toggleTheme);
           }
 
-
+          /* Function to update the greetings based of the input that has been entered or local storage */
           function headingUpdate() {
             const name = getQueryParam('userName');
             if (name) {
@@ -149,24 +153,25 @@
             }
           }
 
+
         </script>
 
-
+        <!-- Paragraph tag describing my first year at university, centered -->
         <p style="text-align: center;"> My first year university has been a very weird experience as the transition from highschool to university was very significant and a vast one. </p>
-
+        <!-- Centered subheading text -->
         <h3 style="text-align: center;">My experience so far</h3>
-
+        <!-- Paragraph tag describing challanges and experience so far -->
         <p class="border"> Learning how to program has been one very challanging task for me as I am someone who has had no prior experience with any sort of languages or even IT in general. I was among the many that were unsure about what degree to choose but the bachelor of IT was something that stood out to me the most during the end of high school so I decided I will look further into this degree instead.</p>
-
+        <!-- Centered subheading text -->
         <h3 style="text-align: center;">First day at university</h3>
-
+        <!-- Paragraph tag describing my first day at uni -->
         <p class="border1">If there's something that I remember so vividly, it has to be my first day at uni it felt like that you've just moved to different schools or it's your first day of high-school and you're all alone once again hoping to find people that share the same interests as you. Apart from not being very clueless I was also very scared about not knowing a single thing about the course. I remember coming to my Networking Fundamentals class and was absouletly terrified with Packet Tracer as I had zero clue on what it was and what its purpose was, this single though haunted me for whole of first week leading me to question myself and my choice of degree. But ofcourse as time went on I gradually started gaining interest and put things together and figure it all out once and for all.</p>
 
       </article>
     <div>
 
     </main>
-
+    <!-- Footer with copyright notice -->
     <footer>
       <p0>©Copyright 2050 by nobody. All rights reversed.</p>
     </footer>
